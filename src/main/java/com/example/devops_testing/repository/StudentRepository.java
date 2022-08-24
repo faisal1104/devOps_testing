@@ -34,4 +34,11 @@ public class StudentRepository {
 
     studentInformationMap.put(studentInformation.getId(), studentInformation);
   }
+
+  public void deleteById(int id){
+    if (!studentInformationMap.containsKey(id))
+      throw new RuntimeException("Student not found with id: "+id);
+
+    studentInformationMap.remove(id);
+  }
 }

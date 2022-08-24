@@ -23,4 +23,8 @@ public class StudentService {
   public List<StudentInformation> getAll(){
     return studentRepository.findAll();
   }
+
+  public void deleteById(int id){
+    studentRepository.deleteById(id);
+  }
 }
