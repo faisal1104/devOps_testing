@@ -41,7 +41,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
-        <finalName>devOps_testing</finalName>
+        <finalName>devops_testing</finalName>
     </build>
 
 </project>
