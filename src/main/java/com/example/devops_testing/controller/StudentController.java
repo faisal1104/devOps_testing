@@ -13,11 +13,6 @@ import java.util.List;
 public class StudentController {
   private final StudentService studentService;
 
-  @PostMapping
-  public void addStudentInfo(@RequestBody StudentInformation studentInformation){
-    studentService.addStudentInfo(studentInformation);
-  }
-
   @GetMapping
   public List<StudentInformation> getAll(){
     return studentService.getAll();
@@ -26,6 +21,11 @@ public class StudentController {
   @GetMapping("{id}")
   public StudentInformation getById(@PathVariable int id){
     return studentService.getById(id);
+  }
+
+  @PostMapping
+  public void addStudentInfo(@RequestBody StudentInformation studentInformation){
+    studentService.addStudentInfo(studentInformation);
   }
 
   @DeleteMapping("{id}")
